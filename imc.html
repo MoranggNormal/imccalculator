@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        
+        alert('Bem vindo à calculadora online de "IMC" (Índice de Massa Corporal)\n\n' + 'A seguir, pediremos alguns dados.')
+
+        let pedir_peso = prompt("Calculadora de IMC online\n\n" + "Digite seu peso em Kilogramas: \n(Ex: 54.13)");
+        let pedir_altura = prompt("Calculadora de IMC online\n\n" + "Digite sua altura em metros: \n(Ex: 1.80)")
+
+
+        let imc = {
+            dado_peso: pedir_peso,
+            dado_altura: pedir_altura
+        }
+
+        alert("Dados informados:\n\n" + "Peso (em kg): " + imc.dado_peso + "\nAltura (em metros): " + imc.dado_altura)
+
+        function calcular_imc(peso, altura) {
+            const imc = peso / (altura * altura);
+            alert("Resultado" + "\nSeu IMC é: " + imc)
+            return imc
+        }
+
+        calcular_imc(imc.dado_peso, imc.dado_altura)
+
+        // retorna "Seu IMC é: 16.666666666666664"
+
+    </script>
+
+</body>
+
+</html>
