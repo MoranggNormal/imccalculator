@@ -26,12 +26,32 @@
         alert("Dados informados:\n\n" + "Peso (em kg): " + imc.dado_peso + "\nAltura (em metros): " + imc.dado_altura)
 
         function calcular_imc(peso, altura) {
-            const imc = peso / (altura * altura);
-            alert("Resultado" + "\nSeu IMC é: " + imc)
+            imcc = peso / (altura * altura);
+            alert("Resultado" + "\nSeu IMC é: " + imcc.toFixed(2))
             return imc
         }
 
         calcular_imc(imc.dado_peso, imc.dado_altura)
+    
+        function tabela_imc(){
+            if( imcc <= 18.5){
+                alert("Magreza")
+            }
+            else if(imcc == 18.6 || imcc <= 24.9){
+                alert("Normal")
+            }
+            else if(imcc == 25 || imcc <= 29.9){
+                alert("Sobrepeso")
+            }
+            else if(imcc == 30 || imcc <= 39.9){
+                alert("Obesidade")
+            }
+            else if(imcc > 40){
+                alert("Obesidade Grave")
+            }
+        }
+
+        tabela_imc()
 
         // retorna "Seu IMC é: 16.666666666666664"
 
