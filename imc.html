@@ -23,15 +23,16 @@
             dado_altura: pedir_altura
         }
 
-        alert("Dados informados:\n\n" + "Peso (em kg): " + imc.dado_peso + "\nAltura (em metros): " + imc.dado_altura)
+        alert(`Dados informados: \n\nPeso (em kg): ${imc.dado_peso} \nAltura (em metros): ${imc.dado_altura}`)
 
         function calcular_imc(peso, altura) {
             imcc = peso / (altura * altura);
-            alert("Resultado" + "\nSeu IMC é: " + imcc.toFixed(2))
+            alert(`Resultado: \n\nSeu IMC é: ${imcc.toFixed(2)}`)
             return imc
         }
 
         calcular_imc(imc.dado_peso, imc.dado_altura)
+
     
         function tabela_imc(){
             if( imcc <= 18.5){
